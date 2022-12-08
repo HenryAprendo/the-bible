@@ -7,4 +7,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'la-biblia';
+
+
+
+
+
+
+
+
+
+
+  test() {
+    console.log('click');
+  }
+
+
+
 }
