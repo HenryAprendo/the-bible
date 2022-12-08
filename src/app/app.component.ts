@@ -6,21 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'la-biblia';
+
+  openMenu: boolean = false;
 
 
-
-
-
-
-
-
-
-
-  test() {
-    console.log('click');
+  toggleSideMenu() {
+    this.openMenu = !this.openMenu;
   }
-
 
 
 }

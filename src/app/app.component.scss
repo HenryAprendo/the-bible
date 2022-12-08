@@ -1,0 +1,118 @@
+.side__menu {
+    display: block;
+}
+
+.side__desktop {
+    display: none;
+    border-right: 1px solid #cdcdcd;
+    height: 100vh;
+}
+
+.menu__container {
+    position: fixed;
+    top: 0;
+    right: calc(100% - 25.1rem);
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all ease-out 0.5s;
+    &.active {
+        transform: translateX(0);
+    }
+    // transform: translateX(0);
+    border-right: 1px solid #cdcdcd;
+    background: white;
+}
+
+.menu__banner {
+    width: 25rem;
+}
+
+.menu__nav {
+    padding: 1.2rem;
+}
+
+.list__item {
+    margin-bottom: 1rem;
+    line-height: normal;
+}
+
+.item__ancla {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.item__icon {
+    display: inline-block;
+    width: 2.5rem;
+    height: 25px;
+    background-position: center;
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+
+.item__icon-bible {
+    background-image: url('./../assets/icons/3032478_bible_book_chritian_cross_icon.png');
+}
+
+.item__icon-note {
+    background-image: url('./../assets/icons/3209355_document_edit_note_review_writing_icon.png');
+}
+
+.item__icon-favorite {
+    background-image: url('./../assets/icons/9458779_ecommerce_bookmark_favorite_icon.png');
+}
+
+.item__icon-share {
+    background-image: url('./../assets/icons/9035090_share_social_icon.png');
+}
+
+.item__icon-config {
+    background-image: url('./../assets/icons/1564529_mechanism_options_settings_configuration_setting_icon.png');
+}
+
+.item__icon-quality {
+    background-image: url('./../assets/icons/326703_favorite_rate_star_icon.png');
+}
+
+.item__icon-protected {
+    background-image: url('./../assets/icons/5208366_lock_padlock_protection_secure_security_icon.png');
+}
+
+
+@media screen and (min-width: 940px) {
+    .side__menu  {
+      display: none;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: 25rem auto;
+    }
+    .side__desktop {
+        display: block;
+        grid-column: 1/2;
+    }
+
+    .list__item {
+        margin-bottom: 2rem;
+        // line-height: normal;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
