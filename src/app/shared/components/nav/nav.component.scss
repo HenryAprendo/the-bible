@@ -1,0 +1,40 @@
+
+.nav__list {
+    height: 3rem;
+    width: 15rem;
+    // padding: 0 1rem;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    background: darkblue;
+}
+
+.item__icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url('./../../../../assets/icons/6611398_elements_hamburger_interface_list_menu_icon.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+}
+
+.item__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+
+}
+
+@media screen and (min-width: 940px) {
+    .list__item button {
+        display: none;
+    }
+}
+
+
+
+

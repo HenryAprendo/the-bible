@@ -97,6 +97,10 @@
         grid-column: 1/2;
     }
 
+    .content {
+        grid-column: 2/3;
+    }
+
     .list__item {
         margin-bottom: 2rem;
         // line-height: normal;

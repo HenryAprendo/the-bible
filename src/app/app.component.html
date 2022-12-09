@@ -4,9 +4,9 @@
       <img src="./../assets/icons/pexels-fredox-carvalho-9694826.jpg" class="menu__banner" alt="banner">
     </figure>
     <nav class="menu__nav">
-      <ul class="menu__nav_list">
+      <ul class="menu__nav_list" (click)="toggleSideMenu()">
         <li class="list__item">
-          <a class="item__ancla" routerLink="#"><span class="item__icon item__icon-bible"></span>Biblia</a>
+          <a class="item__ancla" routerLink="/bible"><span class="item__icon item__icon-bible"></span>Biblia</a>
         </li>
         <li class="list__item">
           <a class="item__ancla" routerLink="#"><span class="item__icon item__icon-note"></span>Notas</a>
@@ -27,19 +27,17 @@
           <a class="item__ancla" routerLink="#"><span class="item__icon item__icon-protected"></span>Politicas de Privacidad</a>
         </li>
       </ul>
-      <button (click)="toggleSideMenu()">togle</button>
     </nav>
   </div>
 </section>
 
-<button (click)="toggleSideMenu()">togle</button>
-
+<!-- desktop -->
 <section class="grid">
   <div class="side__desktop">
     <nav class="menu__nav">
       <ul class="menu__nav_list">
         <li class="list__item">
-          <a class="item__ancla" routerLink="#"><span class="item__icon item__icon-bible"></span>Biblia</a>
+          <a class="item__ancla" routerLink="/bible"><span class="item__icon item__icon-bible"></span>Biblia</a>
         </li>
         <li class="list__item">
           <a class="item__ancla" routerLink="#"><span class="item__icon item__icon-note"></span>Notas</a>
@@ -60,9 +58,9 @@
           <a class="item__ancla" routerLink="#"><span class="item__icon item__icon-protected"></span>Politicas de Privacidad</a>
         </li>
       </ul>
-      <button (click)="toggleSideMenu()">togle</button>
     </nav>
   </div>
-
-  <router-outlet></router-outlet>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
 </section>
