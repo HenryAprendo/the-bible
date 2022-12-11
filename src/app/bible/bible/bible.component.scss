@@ -9,16 +9,59 @@ header {
     box-sizing: border-box;
 }
 
-.icon__search {
+.main__container {
+    background-color: lightgray;
+}
+
+.list__item {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.item__link {
+    display: grid;
+    grid-template-columns: 40px auto 2fr;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: white;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    text-decoration: none
+}
+
+.item__link .icon__arrow-forward {
+    justify-self: flex-end;
+}
+
+span {
     display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-image: url('./../../../assets/icons/352091_search_icon.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+.icon__search {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('./../../../assets/icons/352091_search_icon.png');
+}
+
+.icon__bible {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('./../../../assets/icons/3032478_bible_book_chritian_cross_icon.png');
+}
+
+.icon__arrow-forward {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('./../../../assets/icons/211607_right_arrow_icon.png');
+}
 
 
 @media screen and (min-width: 940px) {
