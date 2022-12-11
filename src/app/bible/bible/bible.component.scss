@@ -6,14 +6,10 @@ header {
     align-items: center;
     background-color: darkblue;
     padding: 0 1rem;
-    // box-sizing: border-box;
     position: sticky;
     top: 0;
 }
 
-.main__container {
-    background-color: lightgray;
-}
 
 .list__item {
     display: grid;
@@ -31,7 +27,7 @@ header {
     margin: 0 auto;
     padding: 1rem;
     background-color: white;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     border-radius: 4px;
     text-decoration: none
 }
@@ -57,6 +53,11 @@ span {
     width: 2.5rem;
     height: 2.5rem;
     background-image: url('./../../../assets/icons/3032478_bible_book_chritian_cross_icon.png');
+}
+
+.item__name {
+    color: black;
+    font-weight: 500;
 }
 
 .icon__arrow-forward {

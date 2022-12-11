@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Book } from '../models/book.model';
+import { Books, Chapters} from '../models/book.model';
 import { map, Observable } from 'rxjs';
-import { HttpParams } from '@angular/common/http';
 
 interface Data {
-  data: Book[]
+  data: any[]
 }
 
 @Injectable({
@@ -20,14 +19,16 @@ export class BibleService {
 
   constructor(private http: HttpClient) { }
 
-  allBooks(): Observable<Book[]> {
+  allBooks(): Observable<Books[]> {
     return this.http.get<Data>(this.url, { headers: this.headers }).pipe(
       map( response =>  response.data )
     )
   }
 
-  oneBook(id:string){
-    return this.http.get(`${this.url}/${id}/chapters`, { headers: this.headers });
+  oneBook(id:string): Observable<Chapters[]> {
+    return this.http.get<Data>(`${this.url}/${id}/chapters`, { headers: this.headers }).pipe(
+      map(response => response.data)
+    )
   }
 
 

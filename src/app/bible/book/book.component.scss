@@ -1,0 +1,104 @@
+header {
+    background-color: darkblue;
+    width: 100%;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+}
+
+.list__item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    height: 4rem;
+}
+
+.item__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+}
+
+.item__icon {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('./../../../assets/icons/211689_left_arrow_icon.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.item__icon:hover {
+    cursor: pointer;
+}
+
+
+// capitulos.
+
+.box__container {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 2rem;
+    padding: 1rem;
+    margin: 0 auto;
+    height: auto;
+}
+
+.box__item {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 500;
+    justify-self: center;
+
+    box-shadow: 0.1px 0.1px 6px 1px #dcdcdc ;
+
+}
+
+@media screen and (min-width: 600px) {
+    .box__container {
+        display: grid;
+        grid-template-columns:repeat(6, 1fr);
+    }
+
+
+    .box__item {
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .box__container {
+        display: grid;
+        grid-template-columns:repeat(8, 1fr);
+    }
+
+    .box__item {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

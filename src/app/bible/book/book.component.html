@@ -1,0 +1,18 @@
+<header>
+    <ul class="list__item">
+        <li class="item">
+            <span (click)="back()" class="item__icon"></span>
+        </li>
+        <li class="item">
+            <p class="item__title">{{title}}</p>
+        </li>
+    </ul>
+</header>
+
+<main class="main__content">
+    <div class="box__container">
+        <div class="box__item" *ngFor="let item of chapters">
+            {{item.number}}
+        </div>
+    </div>
+</main>

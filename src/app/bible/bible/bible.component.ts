@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { SharedModule } from './../../shared/shared.module';
 import { OpenCloseMenuService } from './../../services/open-close-menu.service';
 import { BibleService } from './../../services/bible.service';
-import { Book } from './../../models/book.model';
+import { Books } from './../../models/book.model';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -16,7 +16,7 @@ import { RouterModule } from '@angular/router';
 export class BibleComponent implements OnInit {
 
   title = 'Biblia RVR';
-  books!: Book[];
+  books!: Books[];
 
   constructor(
     private menuService: OpenCloseMenuService,

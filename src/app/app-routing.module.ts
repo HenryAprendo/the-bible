@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BookComponent } from './../app/bible/book/book.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'bible',
     loadComponent: () => import('./bible/bible/bible.component').then(m => m.BibleComponent)
+  },
+  {
+    path: 'book/:id',
+    component: BookComponent
   }
 ];
 
