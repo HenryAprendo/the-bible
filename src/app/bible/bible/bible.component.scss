@@ -6,7 +6,9 @@ header {
     align-items: center;
     background-color: darkblue;
     padding: 0 1rem;
-    box-sizing: border-box;
+    // box-sizing: border-box;
+    position: sticky;
+    top: 0;
 }
 
 .main__container {
@@ -63,9 +65,19 @@ span {
     background-image: url('./../../../assets/icons/211607_right_arrow_icon.png');
 }
 
+@media screen and (min-width: 600px) {
+    .list__item {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 
 @media screen and (min-width: 940px) {
     .icon__search {
         display: none;
+    }
+
+    .list__item {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
