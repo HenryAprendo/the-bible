@@ -31,6 +31,12 @@ export class BibleService {
     )
   }
 
+  oneChapters(id:string) {
+    return this.http.get(`${this.url}/chapters/${id}/verses`,{ headers: this.headers }).pipe(
+      map( data => data)
+    )
+  }
+
 
 
 }

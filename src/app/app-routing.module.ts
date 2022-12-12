@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookComponent } from './../app/bible/book/book.component';
+import { SearchComponent } from './../app/bible/search/search.component';
 
 
 const routes: Routes = [
@@ -16,7 +17,12 @@ const routes: Routes = [
   {
     path: 'book/:id',
     component: BookComponent
+  },
+  {
+    path: 'search',
+    component: SearchComponent
   }
+
 ];
 
 @NgModule({

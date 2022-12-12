@@ -1,0 +1,61 @@
+header {
+    background-color: darkblue;
+    width: 100%;
+    padding: 0 1rem;
+    position: sticky;
+    top: 0;
+}
+
+.list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    height: 4rem;
+}
+
+.item__input {
+    width: 29rem;
+    background-color: darkblue;
+    color: white;
+    font-size: 1.6rem;
+    border: transparent;
+    outline: none;
+}
+
+.item__input::placeholder {
+    color: white;
+
+}
+
+.item__icon {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('./../../../assets/icons/211689_left_arrow_icon.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+
+.item__icon:hover {
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 940px) {
+    .list__item {
+        justify-content: flex-start;
+    }
+}
+
+
+
+
+
+
+
+
+

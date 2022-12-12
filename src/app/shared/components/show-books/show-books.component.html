@@ -1,0 +1,11 @@
+<main class="main__container">
+    <ul class="list__item">
+        <li *ngFor="let item of books" class="item">
+            <a [routerLink]="['/book', item.id]" class="item__link">
+                <span class="icon__bible"></span>
+                <p class="item__name">{{item.name}}</p>
+                <span class="icon__arrow-forward"></span>
+            </a>
+        </li>
+    </ul>
+</main>
