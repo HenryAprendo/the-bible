@@ -1,0 +1,31 @@
+
+<header>
+    <span class="icon__arrow--back" (click)="back()"></span>
+    <h2 class="title">Crear notas</h2>
+</header>
+
+<main>
+    <div class="container">
+        <form [formGroup]="form">
+            <div class="fields">
+                <input [class.valid]="isValidTitle" [class.invalid]="isInvalidTitle" class="input__title" type="text" placeholder="titulo" formControlName="title">
+                <div class="message" [class.invalid]="fieldTitle.invalid && fieldTitle.touched">
+                    <p *ngIf="fieldTitle.hasError('required')">Campo requerido</p>
+                    <p *ngIf="fieldTitle.errors?.['maxlength']">Máximo 20 caracteres</p>
+                    <p *ngIf="fieldTitle.hasError('minlength')">Mínimo 6 caracteres</p>
+                </div>
+            </div>
+
+            <div class="fields">
+                <textarea [class.valid]="isValidMessage" [class.invalid]="isinvalidMessage" class="input__message" cols="30" rows="20" placeholder="Escribe tu nota aquí" formControlName="message"></textarea>
+                <div class="message" [class.invalid]="fieldMessage.invalid && fieldMessage.touched">
+                    <p *ngIf="fieldMessage.hasError('required')">Campo requerido</p>
+                    <p *ngIf="fieldMessage.errors?.['maxlength']">Máximo 500 caracteres</p>
+                    <p *ngIf="fieldMessage.hasError('minlength')">Mínimo 50 caracteres</p>
+                </div>
+            </div>
+
+            <button type="submit" class="btn__save">Guardar</button>
+        </form>
+    </div>
+</main>

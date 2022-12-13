@@ -1,0 +1,130 @@
+header {
+    background-color: darkblue;
+    padding: 0 1rem;
+    height: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.icon__arrow--back {
+    display: inline-block;
+    width: 2.5rem;
+    height: 2.5rem;
+    background-image: url('./../../../assets/icons/211689_left_arrow_icon.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.title {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.container {
+    padding: 1.2rem;
+}
+
+.fields {
+    margin-bottom: 1rem;
+}
+
+.input__title {
+    width: 100%;
+    height: 4rem;
+    max-width: 400px;
+    padding-left: 1rem;
+    font-size: 1.6rem;
+    border-radius: 6px;
+    border: 1px solid #9a9a9a;
+    outline: none;
+
+    &.valid {
+        border: 1px solid lightgreen;
+    }
+
+    &.invalid {
+        border: 1px solid lightcoral;
+    }
+}
+
+.input__message {
+    width: 100%;
+    max-width: 40rem;
+    padding: 1rem;
+    border: 1px solid #9a9a9a;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    outline: none;
+
+    &.valid {
+        border: 1px solid lightgreen;
+    }
+
+    &.invalid {
+        border: 1px solid lightcoral;
+    }
+}
+
+.btn__save {
+    width: 100%;
+    max-width: 40rem;
+    height: 4rem;
+    background-color: cornflowerblue;
+    border: transparent;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+.btn__save:hover {
+    border: 1px dotted black;
+    color: crimson;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+// manejo de errores
+.message {
+    opacity: 0;
+    &.invalid {
+        opacity: 1;
+    }
+}
+
+.message p {
+    font-size: 1.4rem;
+    color: #DD0000 ;
+    padding: 0.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookComponent } from './../app/bible/book/book.component';
 import { SearchComponent } from './../app/bible/search/search.component';
+import { NoteComponent } from './notes/note/note.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,10 @@ const routes: Routes = [
   {
     path: 'notes',
     loadComponent: () => import('./notes/notes/notes.component').then(m => m.NotesComponent)
+  },
+  {
+    path: 'note',
+    component: NoteComponent
   }
 
 ];
@@ -34,3 +39,11 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
+
+
+
+
+
