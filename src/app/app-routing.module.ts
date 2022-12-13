@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'search',
     component: SearchComponent
+  },
+  {
+    path: 'notes',
+    loadComponent: () => import('./notes/notes/notes.component').then(m => m.NotesComponent)
   }
 
 ];
