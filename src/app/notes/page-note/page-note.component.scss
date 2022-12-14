@@ -1,0 +1,30 @@
+.template-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.template-grid app-note {
+    justify-self: center;
+}
+
+
+@media screen and (min-width: 600px) {
+    .template-grid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+
+@media screen and (min-width: 940px) {
+    .template-grid {
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        max-width: 1024px;
+        // margin: 0 auto;
+    }
+}

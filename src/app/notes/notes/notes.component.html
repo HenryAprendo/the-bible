@@ -3,7 +3,10 @@
 
 <main>
     <div class="main__container">
-        <a routerLink="/note">
+      <app-page-note [notes]="notes" (eventNote)="openMenu()">
+      </app-page-note>
+
+        <a routerLink="/create-note">
           <div class="add__button">+</div>
         </a>
     </div>

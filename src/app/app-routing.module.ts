@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BookComponent } from './../app/bible/book/book.component';
 import { SearchComponent } from './../app/bible/search/search.component';
-import { NoteComponent } from './notes/note/note.component';
+import { CreateNoteComponent } from './notes/create-note/create-note.component';
 
 
 const routes: Routes = [
@@ -28,8 +28,8 @@ const routes: Routes = [
     loadComponent: () => import('./notes/notes/notes.component').then(m => m.NotesComponent)
   },
   {
-    path: 'note',
-    component: NoteComponent
+    path: 'create-note',
+    component: CreateNoteComponent
   }
 
 ];
