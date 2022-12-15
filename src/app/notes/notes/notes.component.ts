@@ -4,7 +4,6 @@ import { SharedModule } from './../../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { PageNoteComponent }  from './../page-note/page-note.component';
 import { StorageNoteService } from './../../services/storage-note.service';
-import { Observable } from 'rxjs';
 import { Note } from './../../models/note.models';
 
 @Component({
@@ -20,19 +19,32 @@ export class NotesComponent implements OnInit{
 
   notes:Note[] = [];
 
+  open:boolean = false;
+
+  noteId:string = '';
+
   constructor(
     private storageNote: StorageNoteService,
     ){}
 
   ngOnInit() {
-    this.storageNote.getAll()
-    .subscribe( data => {
-      this.notes = data;
-    })
+    this.storageNote.mySubscriptionNotes
+      .subscribe( data => {
+        this.notes = data;
+      })
   }
 
-  openMenu() {
+  openMenu(id:string) {
+    this.noteId = id;
+    this.toggle();
+  }
 
+  toggle() {
+    this.open = !this.open;
+  }
+
+  deleteNote() {
+    this.storageNote.delete(this.noteId);
   }
 
 }

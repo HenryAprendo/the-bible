@@ -3,11 +3,29 @@
 
 <main>
     <div class="main__container">
-      <app-page-note [notes]="notes" (eventNote)="openMenu()">
+      <app-page-note [notes]="notes" (eventNote)="openMenu($event)">
       </app-page-note>
-
-        <a routerLink="/create-note">
-          <div class="add__button">+</div>
-        </a>
     </div>
+
+    <section class="menu">
+      <div class="menu__container" *ngIf="open" (click)="toggle()">
+        <ul class="menu__options">
+          <li class="menu__item">
+            <a>Editar</a>
+          </li>
+          <li class="menu__item">
+            Temas
+          </li>
+          <li class="menu__item" (click)="deleteNote()">
+            Eliminar
+          </li>
+        </ul>
+      </div>
+    </section>
 </main>
+
+<a routerLink="/create-note">
+  <div class="add__button">+</div>
+</a>
+
+

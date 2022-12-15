@@ -6,11 +6,15 @@
     flex-direction: column;
     justify-content: space-around;
     border: 1px solid #cdcdcd;
+
+    &.active {
+      border: 2px solid red;
+    }
 }
 
 .box__title {
     font-size: 1.6rem;
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 1px solid #3c3c3c;
     padding: 0.3rem;
 }

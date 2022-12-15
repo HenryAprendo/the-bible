@@ -11,12 +11,15 @@ import { Note } from './../../models/note.models';
 })
 export class NoteComponent {
 
+  active = false;
+
   @Input() note!: Note;
 
   @Output() eventClick = new EventEmitter<string>()
 
   onClick(id:string) {
     this.eventClick.emit(id);
+    this.active = !this.active;
   }
 
 }
