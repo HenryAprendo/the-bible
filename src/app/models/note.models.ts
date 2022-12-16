@@ -3,4 +3,5 @@ export interface Note {
     title: string;
     message: string;
     date: Date;
+    color?: string;
 }

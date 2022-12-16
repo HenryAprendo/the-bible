@@ -1,5 +1,9 @@
 
-<div (click)="onClick(note.id)" *ngIf="note" class="box" [class.active]="active">
+<div
+  [style.backgroundColor]="note.color"
+  (click)="onClick(note.id)"
+  *ngIf="note" class="box">
+
     <h2 class="box__title">{{note.title}}</h2>
     <p class="box__message">{{note.message}}</p>
     <p class="box__date">{{ note.date | date: 'medium' }}</p>

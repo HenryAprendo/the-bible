@@ -55,10 +55,59 @@
   cursor: pointer;
 }
 
+// Menu de opciones pare el cambio del tema.
+.color__container {
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+  width: 20rem;
+  padding: 1rem;
+
+  position: fixed;
+  top: calc((100vh - 4rem)/2 - 6rem);
+  left: calc(100vw/2 - 10rem);
+}
+
+.color__title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.color__template {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.color__box {
+  width: 3rem;
+  height: 3rem;
+}
+
+.color__btn {
+  width: 70px;
+  align-self: flex-end;
+  background-color: white;
+  border: transparent;
+  height: 3rem;
+}
+
+.color__btn:hover {
+  background-color: lightgray;
+  cursor: pointer;
+}
+
 
 //responsive design
 @media screen and (min-width: 940px){
   .menu__container {
+    left: calc(100vw/2);
+  }
+
+  .color__container {
     left: calc(100vw/2);
   }
 }

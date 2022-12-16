@@ -1,6 +1,6 @@
 <div class="template-grid">
-    <app-note *ngFor="let item of notes"
-                [note]="item"
-                (eventClick)="onClick($event)">
+    <app-note *ngFor="let note of notes"
+              [note]="note"
+              (eventClick)="onClick($event)">
     </app-note>
 </div>

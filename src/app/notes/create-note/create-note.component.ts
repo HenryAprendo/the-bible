@@ -32,7 +32,8 @@ export class CreateNoteComponent {
         id: uuidv4(),
         title: this.fieldTitle.value,
         message: this.fieldMessage.value,
-        date: new Date()
+        date: new Date(),
+        color: 'white'
       }
 
       this.storageNote.save(note);

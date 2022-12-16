@@ -18,7 +18,7 @@ export class StorageNoteService {
 
   save(note:Note){
     this.notes.push(note);
-    localStorage.setItem('notes', JSON.stringify(this.notes));
+    this.update();
     this.notifications();
   }
 
@@ -30,13 +30,35 @@ export class StorageNoteService {
   }
 
   delete(id:string) {
-    const index = this.notes.findIndex( note => note.id === id);
-    if(index >= 0){
+    const index = this.findPosition(id);
+    if(index !== null){
       this.notes.splice(index,1);
+
       //Actualizamos despues de eliminar
-      localStorage.setItem('notes', JSON.stringify(this.notes));
+      this.update();
       this.notifications();
     }
+  }
+
+  changeBackgroundColor(color:string, id:string) {
+    const index = this.findPosition(id);
+    if(index !== null){
+      this.notes[index].color = color;
+      this.update();
+      this.notifications();
+    }
+  }
+
+  private findPosition(id:string) {
+    const index = this.notes.findIndex( note => note.id === id);
+    if(index >= 0){
+      return index;
+    }
+    return null;
+  }
+
+  private update(){
+    localStorage.setItem('notes', JSON.stringify(this.notes));
   }
 
   private notifications(){
