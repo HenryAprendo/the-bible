@@ -1,10 +1,10 @@
-<header>
+<header [style.backgroundColor]="themeColor">
     <ul class="list__item">
         <li class="item">
             <span class="item__icon" (click)="back()"></span>
         </li>
         <li class="item">
-            <input class="item__input" type="search" placeholder="Buscar" [formControl]="search">
+            <input [style.backgroundColor]="themeColor" class="item__input" type="search" placeholder="Buscar" [formControl]="search">
         </li>
     </ul>
 </header>

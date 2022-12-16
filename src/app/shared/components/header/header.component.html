@@ -1,5 +1,8 @@
 
-<header>
-    <app-nav [title]="title" (openClose)="openCloseMenu()">
+<header [style.backgroundColor]="themeColor">
+    <app-nav
+      [title]="title"
+      (openClose)="openCloseMenu()"
+      [color]="themeColor">
     </app-nav>
 </header>

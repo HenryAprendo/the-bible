@@ -1,5 +1,8 @@
-<header>
-    <app-nav [title]="title" (openClose)="openCloseMenu()">
+<header [style.backgroundColor]="themeColor">
+    <app-nav
+      [title]="title"
+      [color]="themeColor"
+      (openClose)="openCloseMenu()">
     </app-nav>
     <span class="icon__search" routerLink="../search"></span>
 </header>

@@ -9,6 +9,8 @@ export class NavComponent {
 
   @Input() title = '';
 
+  @Input() color = '';
+
   @Output() openClose = new EventEmitter();
 
   toggleStateMenu() {

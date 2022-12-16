@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BibleService } from './../../services/bible.service';
+import { ConfigService } from './../../services/config.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { Chapters } from './../../models/book.model';
@@ -16,10 +17,12 @@ export class BookComponent implements OnInit {
 
   id!:string;
   title:string = '';
+  themeColor!: string;
 
   chapters: Chapters[] = [];
 
   constructor(
+    private config: ConfigService,
     private bibleService: BibleService,
     private route: ActivatedRoute,
     private router: Router
@@ -30,6 +33,11 @@ export class BookComponent implements OnInit {
       this.id = params.get('id')!;
       this.getBook();
     });
+
+    this.config.suscriptionTheme
+      .subscribe(color => {
+        this.themeColor = color;
+      })
   }
 
   getBook(){

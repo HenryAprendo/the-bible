@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { v4 as uuidv4 } from 'uuid';
 import { Note } from '../../models/note.models';
 import { StorageNoteService }  from '../../services/storage-note.service';
+import { ConfigService }  from '../../services/config.service';
 
 @Component({
   standalone: true,
@@ -13,16 +14,26 @@ import { StorageNoteService }  from '../../services/storage-note.service';
   templateUrl: './create-note.component.html',
   styleUrls: ['./create-note.component.scss']
 })
-export class CreateNoteComponent {
+export class CreateNoteComponent implements OnInit {
 
   form!:FormGroup;
+
+  colorTheme!:string;
 
   constructor(
     private fb:FormBuilder,
     private router: Router,
-    private storageNote: StorageNoteService
+    private storageNote: StorageNoteService,
+    private config: ConfigService
   ){
     this.builderForm();
+  }
+
+  ngOnInit() {
+    this.config.suscriptionTheme
+      .subscribe(color => {
+        this.colorTheme = color;
+      })
   }
 
   saveNote(){

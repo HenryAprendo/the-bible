@@ -1,0 +1,40 @@
+
+<app-header [title]="title"></app-header>
+
+<main>
+
+  <h2 class="title">Temas</h2>
+
+  <section class="color">
+    <div class="color__template">
+      <div
+        *ngFor="let item of colors"
+        [style.backgroundColor]="item.color"
+        [style.border]="item.selected ? '2px solid black' : '' "
+        (click)="chooseColor(item.color, item.id)"
+        class="color__box">
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

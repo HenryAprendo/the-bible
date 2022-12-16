@@ -5,7 +5,8 @@ import { Books } from './../../models/book.model';
 import { SharedModule } from "../../shared/shared.module";
 import { BibleService } from './../../services/bible.service';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
-import { debounceTime, filter, from, map} from 'rxjs';
+import { ConfigService } from './../../services/config.service';
+
 
 @Component({
     standalone: true,
@@ -22,32 +23,22 @@ export class SearchComponent {
 
   books: Books[] = []
 
+  themeColor!:string;
+
   constructor(
     private router: Router,
-    private bibleService: BibleService
+    private bibleService: BibleService,
+    private config: ConfigService
   ){}
 
   ngOnInit(){
     this.getBooks();
 
-    // this.search.valueChanges.subscribe( value => {
+    this.config.suscriptionTheme
+      .subscribe( color => {
+        this.themeColor = color;
+      })
 
-    //   let expression: RegExp;
-    //   if(value !== null && value.length > 0){
-    //     expression = RegExp(value,'i');
-
-    //     let myFilter$ = from(this.books).pipe(
-    //       filter( book => expression.test(book.name)),
-    //       map( item => )
-    //     )
-
-    //     myFilter$.subscribe( books => {
-    //       const newArray = [];
-    //       newArray.push(books);
-
-    //     })
-    //   }
-    // })
 
     this.search.valueChanges.subscribe( value => {
       console.log(value);

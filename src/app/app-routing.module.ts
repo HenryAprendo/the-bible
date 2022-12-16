@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BookComponent } from './../app/bible/book/book.component';
 import { SearchComponent } from './../app/bible/search/search.component';
 import { CreateNoteComponent } from './notes/create-note/create-note.component';
+import { SettingComponent } from './../app/settings/setting/setting.component';
 
 
 const routes: Routes = [
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'create-note',
     component: CreateNoteComponent
+  },
+  {
+    path: 'setting',
+    component: SettingComponent
   }
 
 ];

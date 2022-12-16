@@ -28,9 +28,10 @@
         <h2 class="color__title">Cambia el color</h2>
         <div class="color__template">
           <div
-            *ngFor="let color of colors"
-            [style.backgroundColor]="color"
-            (click)="chooseColor(color)"
+            *ngFor="let item of colors"
+            [style.backgroundColor]="item.color"
+            (click)="chooseColor(item.color, item.id)"
+            [style.border]="item.selected ? '1px solid black': '' "
             class="color__box">
           </div>
         </div>
@@ -39,7 +40,6 @@
                 (click)="changeColor()">Aceptar</button>
       </div>
     </section>
-
 </main>
 
 <a routerLink="/create-note">

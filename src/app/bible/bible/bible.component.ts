@@ -5,6 +5,7 @@ import { OpenCloseMenuService } from './../../services/open-close-menu.service';
 import { BibleService } from './../../services/bible.service';
 import { Books } from './../../models/book.model';
 import { RouterModule } from '@angular/router';
+import { ConfigService } from './../../services/config.service';
 
 @Component({
   standalone: true,
@@ -16,15 +17,23 @@ import { RouterModule } from '@angular/router';
 export class BibleComponent implements OnInit {
 
   title = 'Biblia RVR';
+
+  themeColor!:string;
+
   books!: Books[];
 
   constructor(
     private menuService: OpenCloseMenuService,
     private bibleService: BibleService,
+    private config: ConfigService
   ){}
 
   ngOnInit(){
     this.getBooks();
+    this.config.suscriptionTheme
+      .subscribe( color => {
+        this.themeColor = color;
+      })
   }
 
   openCloseMenu() {
