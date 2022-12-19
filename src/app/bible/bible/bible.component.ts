@@ -12,7 +12,7 @@ import { ConfigService } from './../../services/config.service';
   imports: [CommonModule, SharedModule, RouterModule],
   selector: 'app-bible',
   templateUrl: './bible.component.html',
-  styleUrls: ['./bible.component.scss']
+  styleUrls: ['./bible.component.scss'],
 })
 export class BibleComponent implements OnInit {
 
