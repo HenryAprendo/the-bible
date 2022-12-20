@@ -6,7 +6,8 @@
     <nav class="menu__nav">
       <ul class="menu__nav_list" (click)="toggleSideMenu()">
         <li class="list__item">
-          <a class="item__ancla" routerLink="/bible"><span class="item__icon item__icon-bible--mobile"></span>Biblia</a>
+          <!-- <a class="item__ancla" routerLink="/bible"><span class="item__icon item__icon-bible--mobile"></span>Biblia</a> -->
+          <a class="item__ancla" routerLink="/bible"><span class="material-icons">book</span>Biblia</a>
         </li>
         <li class="list__item">
           <a class="item__ancla" routerLink="/notes"><span class="item__icon item__icon-note"></span>Notas</a>
@@ -26,6 +27,7 @@
         <li class="list__item">
           <a class="item__ancla" routerLink="#"><span class="item__icon item__icon-protected"></span>Politicas de Privacidad</a>
         </li>
+
       </ul>
     </nav>
   </div>
@@ -37,25 +39,25 @@
     <nav class="menu__nav">
       <ul class="menu__nav_list">
         <li class="list__item">
-          <a class="item__ancla" routerLink="/bible"><span class="item__icon item__icon-bible"></span>Biblia</a>
+          <a class="item__ancla" routerLinkActive="active" routerLink="/bible"><span class="material-icons book">book</span>Biblia</a>
         </li>
         <li class="list__item">
-          <a class="item__ancla" routerLink="/notes"><span class="item__icon item__icon-note"></span>Notas</a>
+          <a class="item__ancla" routerLinkActive="active" routerLink="/notes"><span class="item__icon item__icon-note"></span>Notas</a>
         </li>
         <li class="list__item">
-          <a class="item__ancla" routerLink="#"><span class="item__icon item__icon-favorite"></span>Favoritos</a>
+          <a class="item__ancla" routerLinkActive="active" routerLink="#"><span class="item__icon item__icon-favorite"></span>Favoritos</a>
         </li>
         <li class="list__item">
-          <a class="item__ancla" routerLink="#"><span class="item__icon item__icon-share"></span>Compartir</a>
+          <a class="item__ancla" routerLinkActive="active" routerLink="#"><span class="item__icon item__icon-share"></span>Compartir</a>
         </li>
         <li class="list__item">
-          <a class="item__ancla" routerLink="/setting"><span class="item__icon item__icon-config"></span>Ajustes</a>
+          <a class="item__ancla" routerLinkActive="active" routerLink="/setting"><span class="item__icon item__icon-config"></span>Ajustes</a>
         </li>
         <li class="list__item">
-          <a class="item__ancla" routerLink="#"><span class="item__icon item__icon-quality"></span>Calificar App</a>
+          <a class="item__ancla" routerLinkActive="active" routerLink="#"><span class="item__icon item__icon-quality"></span>Calificar App</a>
         </li>
         <li class="list__item">
-          <a class="item__ancla" routerLink="#"><span class="item__icon item__icon-protected"></span>Politicas de Privacidad</a>
+          <a class="item__ancla" routerLinkActive="active" routerLink="#"><span class="item__icon item__icon-protected"></span>Politicas de Privacidad</a>
         </li>
       </ul>
     </nav>

@@ -9,15 +9,13 @@
     gap: 2rem;
 }
 
-.item__icon {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    background-image: url('./../../../../assets/icons/6611398_elements_hamburger_interface_list_menu_icon.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0;
+.material-icons.menu {
+  color: white;
+}
+
+.material-icons.menu:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 1);
 }
 
 .item__title {
@@ -28,7 +26,7 @@
 }
 
 @media screen and (min-width: 940px) {
-    .list__item button {
+    .list__item .material-icons.menu {
         display: none;
     }
 }

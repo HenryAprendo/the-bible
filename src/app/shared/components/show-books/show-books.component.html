@@ -1,8 +1,8 @@
 <main class="main__container">
-    <ul class="list__item">
-        <li *ngFor="let item of books" class="item" [@flyInOutX]="'in'">
+    <ul class="list__item"  [@filterAnimation]="total">
+        <li *ngFor="let item of books" class="item">
             <a [routerLink]="['/book', item.id]" class="item__link">
-                <span class="icon__bible"></span>
+                <span class="material-icons book">book</span>
                 <p class="item__name">{{item.name}}</p>
                 <span class="icon__arrow-forward"></span>
             </a>

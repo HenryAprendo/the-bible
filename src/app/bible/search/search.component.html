@@ -2,6 +2,7 @@
     <ul class="list__item">
         <li class="item">
             <span class="item__icon" (click)="back()"></span>
+            <!-- <span class="material-icons ">arrow</span> -->
         </li>
         <li class="item">
             <input [style.backgroundColor]="themeColor" class="item__input" type="search" placeholder="Buscar" [formControl]="search">
@@ -9,6 +10,5 @@
     </ul>
 </header>
 
-<app-show-books [books]="books">
-
+<app-show-books [books]="books" [total]="booksTotal">
 </app-show-books>

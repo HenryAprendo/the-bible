@@ -25,6 +25,8 @@ export class SearchComponent {
 
   themeColor!:string;
 
+  booksTotal:number = -1;
+
   constructor(
     private router: Router,
     private bibleService: BibleService,
@@ -39,27 +41,19 @@ export class SearchComponent {
         this.themeColor = color;
       })
 
-
     this.search.valueChanges.subscribe( value => {
-      console.log(value);
-      let expression: RegExp;
+      value = value ? value.trim() : '';
+      this.books = this.data.filter(book => book.name.toLowerCase().includes(value!.toLowerCase()));
+      const newTotal = this.books.length;
 
-      if(value !== null && value.length > 0){
-        expression = RegExp(value,'i')
+      if(this.booksTotal !== newTotal){
+        this.booksTotal = newTotal;
+      }
+      else if(!value){
+        this.booksTotal = -1;
+      }
+    });
 
-        this.books = this.books.filter( item => {
-          if(expression.test(item.name)){
-            return item;
-          }
-          else {
-            return;
-          }
-        });
-      }
-      else {
-        this.books = this.data;
-      }
-    })
   }
 
   getBooks() {
@@ -75,3 +69,5 @@ export class SearchComponent {
   }
 
 }
+
+

@@ -9,7 +9,8 @@
 
 .item__link {
     display: grid;
-    grid-template-columns: 40px auto 2fr;
+    // grid-template-columns: 40px auto 2fr;
+    grid-template-columns: 40px 3fr 1fr;
     align-items: center;
     width: 300px;
     margin: 0 auto;
@@ -17,24 +18,20 @@
     background-color: white;
     font-size: 1.6rem;
     border-radius: 4px;
-    text-decoration: none
+    text-decoration: none;
+    justify-items: center;
+}
+
+.item__link:hover {
+  background-color: rgb(231, 229, 229);
 }
 
 .item__link .icon__arrow-forward {
     justify-self: flex-end;
 }
-
-span {
-    display: inline-block;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.icon__bible {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-image: url('./../../../../assets/icons/3032478_bible_book_chritian_cross_icon.png');
+.material-icons.book {
+  color: lightslategray;
+  font-size: 36px;
 }
 
 .item__name {
@@ -43,9 +40,13 @@ span {
 }
 
 .icon__arrow-forward {
+    display: inline-block;
     width: 2.5rem;
     height: 2.5rem;
     background-image: url('./../../../../assets/icons/211607_right_arrow_icon.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 600px) {

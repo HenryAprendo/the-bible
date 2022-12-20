@@ -18,6 +18,11 @@ header {
     background-repeat: no-repeat;
 }
 
+.icon__arrow--back:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
 .title {
     font-size: 1.8rem;
     color: white;

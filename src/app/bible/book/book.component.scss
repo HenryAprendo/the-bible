@@ -27,11 +27,11 @@ header {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: white;
 }
 
 .item__icon:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 
@@ -63,6 +63,13 @@ header {
 
     box-shadow: 0.1px 0.1px 6px 1px #dcdcdc ;
 
+}
+
+.box__item:hover {
+  cursor: pointer;
+  box-shadow: none;
+  background-color: rgb(231, 229, 229);
+  color:orangered;
 }
 
 @media screen and (min-width: 600px) {
